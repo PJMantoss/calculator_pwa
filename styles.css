@@ -193,3 +193,8 @@ footer {
     }
 }
 
+
+.info {
+    text-align: justify;
+    margin: 20%;
+}

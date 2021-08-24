@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-    // Installs service worker for offline PWA access
+    // Installing service worker for offline PWA access
     navigator.serviceWorker.register("sw.js");
 }
 
@@ -38,7 +38,9 @@ var Calculator = {
                 this.previous = null;
                 this.operation = null;
 
-                localStorage.setItem("memory", document.querySelector("#memory ul").innerHTML);            
+                localStorage.setItem("memory", document.querySelector("#memory ul").innerHTML);  
+                
+                document.title = "Calculator: " + this.current;
 
             } else {
                 // ERROR
@@ -53,7 +55,7 @@ var Calculator = {
         this.previous = null;
         this.update();
         document.title = "Calculator";
-        
+        document.querySelector("meta[name=theme-color]").content = "#C43B0E";
 
     },
     parseNumber: function (number) {
@@ -97,6 +99,8 @@ var Calculator = {
     },
     processError: function() {
         document.querySelector("#display output").innerHTML = "ERROR";
+        document.querySelector("meta[name=theme-color]").content = "black";
+        document.title = "ERROR - Press C to clear";
         this.operation = null;
         this.current = null;
     },
