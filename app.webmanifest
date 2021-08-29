@@ -6,6 +6,7 @@
     "short_name": "Calc",
     "display": "standalone",
     "theme_color": "#C43B0E",
+    "background_color": "silver",
     "orientation": "any",
     "scope": "./",
     "start_url": "./",
