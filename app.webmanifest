@@ -15,6 +15,12 @@
             "sizes": "192x192",
             "purpose": "any",
             "type": "image/png"
+        },
+        {
+            "src": "icons/badge.png",
+            "sizes": "192x192",
+            "purpose": "badge",
+            "type": "image/png"
         }                  
     ]
 }
