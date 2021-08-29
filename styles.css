@@ -200,3 +200,33 @@ footer {
     text-align: justify;
     margin: 20%;
 }
+
+/* Desktop mini-mode */
+@media (max-width: 260px) {
+    header {
+        display: none;
+    }
+}
+@media (max-height: 400px) and (max-width: 450px) {
+    .container {
+        justify-items: center;        
+        max-width: 100%;
+    }
+
+    #memory, #button_clear, #button_info {
+        display: none;
+    }
+}
+@media (max-height: 290px) {
+    #display output {
+        font-size: 10vh;
+    }
+    #buttons button {
+        background-color: silver;
+        padding: 1vh 0;
+        font-size: 8vh !important;
+    }
+    #cursor {
+        display: none;
+    }
+}
