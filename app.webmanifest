@@ -11,6 +11,12 @@
     "start_url": "./",
     "icons": [
         {
+            "src": "icons/icon512_maskable.png",
+            "sizes": "512x512",
+            "purpose": "maskable",
+            "type": "image/png"
+        },
+        {
             "src": "icons/icon192.png",
             "sizes": "192x192",
             "purpose": "any",
