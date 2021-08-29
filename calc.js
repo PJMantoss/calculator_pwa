@@ -160,5 +160,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
     Calculator.update();
+
+    // Add Keyboard support
+    window.addEventListener("keypress", function(event) {
+        if ((event.keyCode >= 48) && (event.keyCode <= 57)) {
+            // numbers
+            Calculator.parseNumber(event.keyCode-48);
+        } if ((event.keyCode >= 96) && (event.keyCode <= 105)) {
+            // numbers in keypad
+            Calculator.parseNumber(event.keyCode-96);
+        } else if (event.keyCode == 46) {
+            // dot
+            Calculator.parseDecimal();   
+        } else if ((event.keyCode == 13)||(event.keyCode == 43)) {
+            // enter or equals
+            Calculator.equals();   
+        } else if ((event.keyCode == 8)||(event.keyCode == 46)) {
+            // backspace or delete
+            Calculator.clear();
+        } else {
+            console.log(event.keyCode)
+        }
+    })
 });
 
